@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synd by Rohit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+
+    <header>
+      <a href="#" class="brand">SYND</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="https://impsynd.github.io/Synd.html">Home</a>
+          <a href="https://impsynd.github.io/storiesbysynd.html">Stories By Synd</a>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="home">
+      <video class="video-slide active" src="Synd.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="Marine.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="Poppy Field.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>           <br><span>        </span></h1>
+        <p>            </p>
+      </div>
+      <div class="content">
+        <h1>About<br><span></span></h1>
+        <p>Hi there, I'm just a simple guy who loves to talk to people for a long period of time, If the other person likes to interact with me I'll interact with them too...
+        I love watching anime shows and movies. There are many online friends of mine from all around the world who are very special to me. Lastly I'll drop some great stories of mine in the explore section, I really hope all of you liked my blog. </p>
+      </div>
+      <div class="content">
+        <h1>Explore<br><span></span></h1>
+        <p>Coming Soon</p>
+      </div>
+      <div class="media-icons">
+        <a href="https://www.snapchat.com/add/rohitkingpin10?share_id=jPjblkmHPjU&locale=en-GB"><i class="fab fa-snapchat"></i></a>
+        <a href="https://www.instagram.com/impsynd/"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/ImpSynd?t=PdrxcdYFV60ktaBfA6e4eg&s=09"><i class="fab fa-twitter"></i></a>
+        <a href="https://open.spotify.com/user/5sjdw7ziryytew8dex1gpnjba?si=af3c839b6c9c4dbb"><i class="fab fa-spotify"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
