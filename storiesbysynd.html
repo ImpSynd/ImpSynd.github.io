@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories By Synd</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">    </a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="https://impsynd.github.io/Synd.html">Home</a>
+          <a href="#">Stories By Synd</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="1.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Ep.2 ><br><span>Ep.1</span></h1>
+        <p>People</p>
+        <p>Society. Society in WB is just nuts specially in our neighborhood. We can’t even say when people change, it depends on the individual, weather to be disrespectful or be an honorable person. Why did I write about Kolkata’s society? It’s because there was an awful situation where I had to go through. False allegations.</p>
+<p>In our neighborhood an elder sister whom I knew ran with a man which I didn’t know, one of my close friend said that someone was spreading an unusual rumor about me. A rumor which I myself didn’t know, the rumor about me was so fearsome that everyone in the neighborhood started talking about it. The rumor was “Rohit did girl trafficking, It’s because of him my girl went missing.”. At first glance they thought about me, but why did they think about me at first? I’m just a simple kid who likes to socialize with people. Later, my friend told me that they married and came to the house the girl was staying because she was ill. “They accepted their marriage?????” That was the first thing I thought. If everything was good why ruin my image? They won’t even tell the neighborhood now that she has came because she was married to a dude whom they didn’t even liked at first.
+</p>
+      </div>
+      <div class="content">
+        <h1>Ep.3 ><br><span>Ep.2</span></h1>
+        <p>Garbage</p>
+        <p>    </p>
+      </div>
+      <div class="content">
+        <h1>Ep.4 ><br><span>Ep.3</span></h1>
+        <p>Dream</p>
+        <p>    </p>
+      </div>
+      <div class="content">
+        <h1>Ep.5 ><br><span></span>Ep.4</h1>
+        <p>Betrayal</p>
+        <p>    </p>
+      </div>
+      <div class="content">
+        <h1>Last Ep ><br><span></span>Ep.5</h1>
+        <p>Life</p>
+        <p>    </p>
+      </div>
+      <div class="content">
+        <h1>Conclusion ><br><span>Last ep</span></h1>
+        <p>Recovery</p>
+        <p>    </p>
+      </div>
+      <div class="content">
+        <h1>Conclusion<br><span></span></h1>
+        <p>My Last Words</p>
+        <p>    </p>
+      </div>
+      <div class="media-icons">
+        <a href="https://www.snapchat.com/add/rohitkingpin10?share_id=jPjblkmHPjU&locale=en-GB"><i class="fab fa-snapchat"></i></a>
+        <a href="https://www.instagram.com/impsynd/"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/ImpSynd?t=PdrxcdYFV60ktaBfA6e4eg&s=09"><i class="fab fa-twitter"></i></a>
+        <a href="https://open.spotify.com/user/5sjdw7ziryytew8dex1gpnjba?si=af3c839b6c9c4dbb"><i class="fab fa-spotify"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
